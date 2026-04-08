@@ -1,0 +1,245 @@
+/* Professional Spiritual Design System */
+:root {
+  /* Refined Gold Palette */
+  --gold-primary: #C9A227;
+  --gold-light: #F5E6C8;
+  --gold-dark: #A8841D;
+  --gold-accent: #E5C100;
+  
+  /* Sacred Colors - More Muted & Professional */
+  --sacred-orange: #E86A35;
+  --sacred-red: #9B1B30;
+  --sacred-saffron: #F4A460;
+  
+  /* Deep Spiritual Tones */
+  --deep-maroon: #4A0D0F;
+  --deep-purple: #3A0F5C;
+  --deep-blue: #151A5C;
+  
+  /* Neutral Elegance */
+  --cream: #FDF9F0;
+  --ivory: #FFFCF5;
+  --warm-white: #F9F7F2;
+  --soft-gray: #E5E5E5;
+  --charcoal: #2D2D2D;
+  --light-text: #6B6B6B;
+  
+  /* Professional Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 12px 32px rgba(0, 0, 0, 0.2);
+  --shadow-gold: 0 4px 16px rgba(201, 162, 39, 0.25);
+  
+  /* Gradients */
+  --gradient-gold: linear-gradient(135deg, #C9A227 0%, #E5C100 50%, #C9A227 100%);
+  --gradient-spiritual: linear-gradient(135deg, #E86A35 0%, #9B1B30 50%, #3A0F5C 100%);
+  --gradient-header: linear-gradient(135deg, #4A0D0F 0%, #9B1B30 50%, #3A0F5C 100%);
+  
+  /* Typography - More Professional */
+  --font-heading: 'Georgia', 'Times New Roman', serif;
+  --font-body: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-accent: 'Palatino Linotype', 'Book Antiqua', serif;
+  
+  /* Spacing Scale */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--font-body);
+	background: linear-gradient(to bottom, var(--cream) 0%, var(--warm-white) 100%);
+	color: var(--charcoal);
+	line-height: 1.7;
+	min-height: 100vh;
+	position: relative;
+	overflow-x: hidden;
+}
+
+/* Sacred Background Pattern */
+body::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: 
+		radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
+		radial-gradient(circle at 80% 80%, rgba(255, 107, 53, 0.03) 0%, transparent 50%);
+	pointer-events: none;
+	z-index: -1;
+}
+
+#root {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Beautiful Scrollbar */
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--gradient-gold);
+	border-radius: 6px;
+	border: 2px solid var(--cream);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--gold-dark);
+}
+
+/* Typography Enhancements */
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-heading);
+	color: var(--deep-maroon);
+	font-weight: 600;
+	line-height: 1.3;
+	margin-bottom: 1rem;
+}
+
+h1 {
+	font-size: 2.5rem;
+	background: var(--gradient-gold);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-shadow: 0 2px 4px rgba(212, 175, 55, 0.2);
+}
+
+h2 {
+	font-size: 2rem;
+	color: var(--deep-maroon);
+}
+
+h3 {
+	font-size: 1.5rem;
+	color: var(--sacred-orange);
+}
+
+p {
+	margin-bottom: 1rem;
+	color: var(--charcoal);
+}
+
+a {
+	color: var(--gold-dark);
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+a:hover {
+	color: var(--sacred-orange);
+	text-shadow: 0 0 8px rgba(255, 107, 53, 0.3);
+}
+
+/* Selection */
+::selection {
+	background: var(--gold-primary);
+	color: white;
+}
+
+::-moz-selection {
+	background: var(--gold-primary);
+	color: white;
+}
+
+/* Utility Classes */
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.gold-text {
+	color: var(--gold-primary);
+}
+
+.spiritual-gradient {
+	background: var(--gradient-spiritual);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+/* Animations */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes glow {
+	0%, 100% {
+		box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+	}
+	50% {
+		box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+	}
+}
+
+@keyframes float {
+	0%, 100% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+.fade-in {
+	animation: fadeIn 0.6s ease-out;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	border: 4px solid var(--gold-light);
+	border-top: 4px solid var(--gold-primary);
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}

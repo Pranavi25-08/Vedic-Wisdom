@@ -1,0 +1,207 @@
+.header {
+  position: relative;
+  background: var(--gradient-header);
+  color: var(--ivory);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Subtle Sacred Background Pattern */
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.03) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Refined Tilaka Symbol */
+.tilaka-symbol {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  animation: float 4s ease-in-out infinite;
+}
+
+.tilaka-svg {
+  width: 48px;
+  height: 64px;
+  color: var(--gold-accent);
+  filter: drop-shadow(0 2px 8px rgba(229, 193, 0, 0.4));
+}
+
+/* Professional Header Title */
+.header-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.title-main {
+  font-size: 2.75rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 3px;
+  margin: 0;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-shadow: none;
+}
+
+.title-sanskrit {
+  font-size: 1.25rem;
+  color: var(--gold-light);
+  font-family: var(--font-accent);
+  letter-spacing: 4px;
+  opacity: 0.85;
+  font-weight: 500;
+}
+
+/* Elegant Subtitle */
+.header-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: var(--font-accent);
+  font-style: italic;
+  margin: 0.5rem 0 0;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+
+/* Refined Decorative Divider */
+.header-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.divider-line {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+  opacity: 0.6;
+}
+
+.divider-dot {
+  width: 5px;
+  height: 5px;
+  background: var(--gold-accent);
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+/* Elegant Ornamental Borders */
+.header-ornament {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--gold-primary) 20%, 
+    var(--gold-accent) 50%, 
+    var(--gold-primary) 80%, 
+    transparent 100%);
+  opacity: 0.5;
+}
+
+.header-ornament.top {
+  top: 0;
+}
+
+.header-ornament.bottom {
+  bottom: 0;
+}
+
+/* Smooth Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 2rem 1rem;
+    min-height: 160px;
+  }
+  
+  .tilaka-svg {
+    width: 40px;
+    height: 54px;
+  }
+  
+  .title-main {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+  
+  .title-sanskrit {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+  
+  .header-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .divider-line {
+    width: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 1.5rem 1rem;
+    min-height: 140px;
+  }
+  
+  .title-main {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+  
+  .title-sanskrit {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+  
+  .header-subtitle {
+    font-size: 0.85rem;
+  }
+}

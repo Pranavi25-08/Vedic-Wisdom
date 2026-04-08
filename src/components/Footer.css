@@ -1,0 +1,94 @@
+.footer {
+  position: relative;
+  background: linear-gradient(135deg, 
+    var(--deep-purple) 0%, 
+    var(--deep-maroon) 100%);
+  color: var(--gold-light);
+  text-align: center;
+  padding: 2rem 1.5rem 1.25rem;
+  margin-top: auto;
+  box-shadow: var(--shadow-lg);
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Elegant Mantra Section */
+.footer-mantra {
+  margin-bottom: 1.25rem;
+}
+
+.mantra-text {
+  font-size: 1.1rem;
+  color: var(--gold-accent);
+  font-family: var(--font-accent);
+  margin: 0.35rem 0;
+  letter-spacing: 1px;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+/* Refined Divider */
+.footer-divider {
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+  margin: 1.25rem auto;
+  opacity: 0.5;
+}
+
+/* Copyright - Professional */
+.footer-copyright {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0.25rem 0;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+/* Tagline - Elegant */
+.footer-tagline {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+  margin-top: 0.25rem;
+  letter-spacing: 0.5px;
+}
+
+/* Elegant Ornamental Border */
+.footer-ornament.top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--gold-primary) 20%, 
+    var(--gold-accent) 50%, 
+    var(--gold-primary) 80%, 
+    transparent 100%);
+  opacity: 0.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.5rem 1rem 1rem;
+  }
+  
+  .mantra-text {
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .footer-copyright {
+    font-size: 0.8rem;
+  }
+  
+  .footer-tagline {
+    font-size: 0.75rem;
+  }
+}
